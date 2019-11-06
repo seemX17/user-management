@@ -1,24 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
-
+import TopBarComponent from './dashboard/topbar/Topbar.component'
+import SideBarComponent from './dashboard/sidebar/Sidebar.component'
+import SettingsComponent from './dashboard/main/Settings.component'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TopBarComponent/>
+      <SideBarComponent/>
+      <SettingsComponent/>
     </div>
   );
 }
