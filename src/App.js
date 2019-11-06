@@ -1,14 +1,15 @@
 import React from 'react';
 import './App.scss';
-import TopBarComponent from './dashboard/topbar/Topbar.component'
-import SideBarComponent from './dashboard/sidebar/Sidebar.component'
-import SettingsComponent from './dashboard/main/Settings.component'
+import TopNavBarComponent from './dashboard/topbar/Top-nav.component';
+import SideNavBarComponent from './dashboard/sidebar/Side-nav.component';
+import MainComponent from './dashboard/main/Main.component';
+
 function App() {
   return (
     <div className="App">
-      <TopBarComponent/>
-      <SideBarComponent/>
-      <SettingsComponent/>
+      <TopNavBarComponent/>
+      <SideNavBarComponent/>
+      <MainComponent/>
     </div>
   );
 }

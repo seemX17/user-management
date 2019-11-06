@@ -1,22 +1,68 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
+//colors
+$primary-color: #27ae60;
+$bg-base-color:#fff;
+$border-color: #e1e7e9;
+
+//Commonn style
+ul {
+  margin: 0;
+  padding: 0;
 }
 
-.App-header {
-  background-color: hsl(220, 13%, 18%);
-  min-height: 100vh;
+li {
+  list-style: none;
+}
+
+//main layout styles
+.layout--top--navbar {
+  height: 64px;
+  background-color: $bg-base-color;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 8px 30px;
+  border-bottom: $border-color solid 1px;
+
+  .brand {
+    display: flex;
+  }
+
+  .brand h3 {
+    color: $primary-color;
+    background-color: black;
+    height: 100%;
+    width: fit-content;
+    padding: 9px;
+  }
 }
 
-.App-link {
-  color: black;
+.layout--side--navbar {
+  position: fixed;
+  height: 100%;
+  padding-top: 20px;
+  top: 64px;
+  width: 220px;
+  left: 0;
+  border-right: $border-color solid 1px;
+  li{
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    &:hover{
+      color: #000000;
+      background-color: $primary-color
+    }
+  }
+}
+
+.layout--middle--section {
+  margin-left: 220px;
+  height: calc(100vh - 64px);
+  width: 100%;
 }

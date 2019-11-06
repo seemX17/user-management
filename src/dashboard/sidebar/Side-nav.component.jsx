@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SidebarComponent extends React.Component {
+class SideNavbarComponent extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -9,7 +9,7 @@ class SidebarComponent extends React.Component {
     }
     render() {
         return (
-            <div className="layout--left--navigation">
+            <div className="layout--side--navbar">
                 <ul>
                     {this.state.itemList.map(function (title, index) {
                         return <li key={index}>{title}</li>;
@@ -19,4 +19,4 @@ class SidebarComponent extends React.Component {
         );
     }
 }
-export default SidebarComponent;
+export default SideNavbarComponent;
