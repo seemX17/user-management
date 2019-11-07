@@ -51,12 +51,24 @@ li {
   left: 0;
   border-right: $border-color solid 1px;
   li{
-    padding: 15px;
     font-size: 20px;
     cursor: pointer;
+   
     &:hover{
       color: #000000;
       background-color: $primary-color
+    }
+    a{
+      color: #000000;
+      text-decoration: none;
+      height: 100%;
+      width: 100%;
+      display: block;
+      padding: 15px;
+      &:hover{
+        color: #000000;
+        text-decoration: none;
+      }
     }
   }
 }
@@ -65,4 +77,8 @@ li {
   margin-left: 220px;
   height: calc(100vh - 64px);
   width: 100%;
+}
+
+.navigation--active{
+  background-color: $primary-color;
 }
