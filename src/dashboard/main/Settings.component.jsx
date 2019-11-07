@@ -79,7 +79,7 @@ class SettingsComponent extends React.Component {
         user: 'Suresh K',
         lastSignedIn: "Within 1 hour",
         role: 'Owner',
-        id: 0
+        id: 1
       },
       {
         user: 'Vikram',
@@ -89,7 +89,7 @@ class SettingsComponent extends React.Component {
       },
       {
         role: 'Sales',
-        id: 8
+        id: 3
       },
       {
         role: 'Sales',
