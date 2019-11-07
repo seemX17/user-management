@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SideNavbarComponent extends React.Component {
     constructor() {
@@ -11,9 +12,12 @@ class SideNavbarComponent extends React.Component {
         return (
             <div className="layout--side--navbar">
                 <ul>
-                    {this.state.itemList.map(function (title, index) {
-                        return <li key={index}>{title}</li>;
-                    })}
+                    {
+                        this.state.itemList.map(function (title, index) {
+                            let routePath = `/${title.toLowerCase().replace(/\s/g,'')}`;
+                            return <li key={index}><Link to={routePath} > {title} </Link></li>
+                        })
+                    }
                 </ul>
             </div>
         );
