@@ -15,8 +15,8 @@ class SettingsComponent extends React.Component {
   render() {
     return (
       <div className="settings--container">
-        <UserModalComponent ref={this.showModalref}/>
-        <button className="button-add mt-4 py-1" onClick={()=> this.showModal()}>Add User</button>
+        <UserModalComponent ref={this.showModalref} />
+        <button className="button-add mt-4 py-1" onClick={() => this.showModal()}>Add User</button>
         <div className="table-container text-center mt-5 w-75">
           <Table bordered hover>
             <thead>
@@ -89,10 +89,8 @@ class SettingsComponent extends React.Component {
     ]
     localStorage.setItem('users', JSON.stringify(obj));
   }
-  showModal(){
-    debugger;
+  showModal() {
     this.showModalref.current.handleShow();
-    //this.setState({showModal: true})
   }
 }
 export default SettingsComponent;

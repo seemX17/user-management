@@ -9,8 +9,8 @@
         return new Promise((resolve, reject) => {
             let storedData = localStorage.getItem('users');
             let userArr = JSON.parse(storedData);
-            userArr.splice(userId-1, 1);
-            localStorage.setItem('users',JSON.stringify(userArr));
+            userArr.splice(userId - 1, 1);
+            localStorage.setItem('users', JSON.stringify(userArr));
             resolve(userArr);
         });
     }
@@ -19,9 +19,10 @@
         return new Promise((resolve, reject) => {
             let storageData = localStorage.getItem('users');
             let userArr = JSON.parse(storageData);
+            userData.id = userArr.length + 1;
             userArr.push(userData);
-            localStorage.setItem('users',JSON.stringify(userArr));
+            localStorage.setItem('users', JSON.stringify(userArr));
             resolve(userArr);
         });
-        
+
     }
