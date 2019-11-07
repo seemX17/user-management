@@ -31,6 +31,11 @@ li {
 
   .brand {
     display: flex;
+
+    span {
+      padding: 12px;
+      font-weight: 400;
+    }
   }
 
   .brand h3 {
@@ -39,6 +44,26 @@ li {
     height: 100%;
     width: fit-content;
     padding: 9px;
+    font-weight: 500;
+  }
+
+  .profile-section {
+    display: flex;
+  }
+
+  .profile-name {
+    padding: 12px;
+    font-weight: 500;
+  }
+
+  .profile-image {
+    height: 47px;
+    width: 47px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+    background-color: $bg-base-color;
   }
 }
 
@@ -50,22 +75,25 @@ li {
   width: 220px;
   left: 0;
   border-right: $border-color solid 1px;
-  li{
+
+  li {
     font-size: 20px;
     cursor: pointer;
-   
-    &:hover{
+
+    &:hover {
       color: #000000;
       background-color: $primary-color
     }
-    a{
+
+    a {
       color: #000000;
       text-decoration: none;
       height: 100%;
       width: 100%;
       display: block;
       padding: 15px;
-      &:hover{
+
+      &:hover {
         color: #000000;
         text-decoration: none;
       }
@@ -79,6 +107,6 @@ li {
   width: 100%;
 }
 
-.navigation--active{
+.navigation--active {
   background-color: $primary-color;
 }
