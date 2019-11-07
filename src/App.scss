@@ -6,9 +6,11 @@ body {
 }
 
 //colors
-$primary-color: #27ae60;
+$accent-color: #27ae60;
 $bg-base-color:#fff;
 $border-color: #e1e7e9;
+$accent-highlight-color: #229955;
+$text-color: #2c3e50;
 
 //Commonn style
 ul {
@@ -39,7 +41,7 @@ li {
   }
 
   .brand h3 {
-    color: $primary-color;
+    color: $accent-color;
     background-color: black;
     height: 100%;
     width: fit-content;
@@ -81,12 +83,11 @@ li {
     cursor: pointer;
 
     &:hover {
-      color: #000000;
-      background-color: $primary-color
+      background-color: $accent-color
     }
 
     a {
-      color: #000000;
+      color: $text-color;
       text-decoration: none;
       height: 100%;
       width: 100%;
@@ -104,9 +105,41 @@ li {
 .layout--middle--section {
   margin-left: 220px;
   height: calc(100vh - 64px);
-  width: 100%;
+  width: 84%;
+  padding: 20px;
 }
 
 .navigation--active {
-  background-color: $primary-color;
+  background-color: $accent-color;
+}
+
+.settings--container {
+  thead {
+    background-color: #ecf0f1;
+  }
+
+  .button-add {
+    background-color: $accent-color;
+    color: #fff;
+    border-radius: 30px;
+    padding: 3px 35px;
+    border: 0px;
+
+    &:hover {
+      background-color: $accent-highlight-color;
+    }
+  }
+}
+
+.deleteIcon {
+  height: 30px;
+  width: 30px;
+  background-color: $accent-color;
+  padding: 7px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $accent-highlight-color;
+  }
 }
