@@ -3,6 +3,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
 }
 
 //colors
@@ -106,8 +107,9 @@ li {
 .layout--middle--section {
   margin-left: 220px;
   height: calc(100vh - 64px);
-  width: 84%;
+  width: calc(100vw - 220px);
   padding: 20px;
+  overflow: auto;
 }
 
 .navigation--active {

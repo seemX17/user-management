@@ -13,7 +13,7 @@ class UserModalComponent extends React.Component {
         this.state = {
             showModal: false,
             email: '',
-            role: ''
+            role: 'Admin'
         }
     }
     render() {
@@ -73,6 +73,7 @@ class UserModalComponent extends React.Component {
         let addUserFunc = addUser(userObj);
         addUserFunc.then((data) => {
             this.handleClose();
+            this.props.handlerFromParant(data);
         });
         event.preventDefault();
     }

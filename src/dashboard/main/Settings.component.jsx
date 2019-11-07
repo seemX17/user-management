@@ -8,14 +8,20 @@ class SettingsComponent extends React.Component {
   constructor(props) {
     super(props);
     this.showModalref = React.createRef();
+    this.handleData = this.handleData.bind(this);
     this.state = {
       userList: [],
     }
   }
+  handleData(data) {
+    this.setState({
+      userList: data
+    });
+  }
   render() {
     return (
       <div className="settings--container">
-        <UserModalComponent ref={this.showModalref} />
+        <UserModalComponent ref={this.showModalref} handlerFromParant={this.handleData}/>
         <button className="button-add mt-4 py-1" onClick={() => this.showModal()}>Add User</button>
         <div className="table-container text-center mt-5 w-75">
           <Table bordered hover>
@@ -68,13 +74,13 @@ class SettingsComponent extends React.Component {
     let obj = [
       {
         user: 'Suresh K',
-        lastSignedIn: Date.now(),
+        lastSignedIn: "Within 1 hour",
         role: 'Owner',
         id: 1
       },
       {
         user: 'Vikram',
-        lastSignedIn: Date.now(),
+        lastSignedIn: "Two days ago",
         role: 'Admin',
         id: 2
       },
