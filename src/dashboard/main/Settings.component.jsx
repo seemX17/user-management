@@ -19,6 +19,9 @@ class SettingsComponent extends React.Component {
     });
   }
   render() {
+    let sortedUser = this.state.userList.sort((a, b) => {
+      return a.id - b.id;
+    });
     return (
       <div className="settings--container">
         <UserModalComponent ref={this.showModalref} handlerFromParant={this.handleData}/>
@@ -36,7 +39,7 @@ class SettingsComponent extends React.Component {
             </thead>
             <tbody>
               {
-                this.state.userList.map((userItem, index) => {
+                sortedUser.map((userItem, index) => {
                   return <tr key={userItem.id}>
                     <td>{userItem.id}</td>
                     <td>{userItem.user}</td>
@@ -76,7 +79,7 @@ class SettingsComponent extends React.Component {
         user: 'Suresh K',
         lastSignedIn: "Within 1 hour",
         role: 'Owner',
-        id: 1
+        id: 0
       },
       {
         user: 'Vikram',
@@ -86,7 +89,7 @@ class SettingsComponent extends React.Component {
       },
       {
         role: 'Sales',
-        id: 3
+        id: 8
       },
       {
         role: 'Sales',

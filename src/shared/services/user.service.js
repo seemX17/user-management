@@ -9,7 +9,8 @@
         return new Promise((resolve, reject) => {
             let storedData = localStorage.getItem('users');
             let userArr = JSON.parse(storedData);
-            userArr.splice(userId - 1, 1);
+            let index = userArr.findIndex(x => x.id === userId);
+            userArr.splice(index, 1);
             localStorage.setItem('users', JSON.stringify(userArr));
             resolve(userArr);
         });
