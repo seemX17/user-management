@@ -2,18 +2,21 @@ import React from 'react';
 import Table from 'react-bootstrap/Table';
 import { getUsers, deleteUser } from '../../shared/services/user.service';
 import deleteIcon from '../../assets/delete-icon.svg';
+import UserModalComponent from './User-modal.component';
 
 class SettingsComponent extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.showModalref = React.createRef();
     this.state = {
-      userList: []
+      userList: [],
     }
   }
   render() {
     return (
       <div className="settings--container">
-        <button className="button-add mt-4">Add User</button>
+        <UserModalComponent ref={this.showModalref}/>
+        <button className="button-add mt-4 py-1" onClick={()=> this.showModal()}>Add User</button>
         <div className="table-container text-center mt-5 w-75">
           <Table bordered hover>
             <thead>
@@ -85,6 +88,11 @@ class SettingsComponent extends React.Component {
       }
     ]
     localStorage.setItem('users', JSON.stringify(obj));
+  }
+  showModal(){
+    debugger;
+    this.showModalref.current.handleShow();
+    //this.setState({showModal: true})
   }
 }
 export default SettingsComponent;
